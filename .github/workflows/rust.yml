@@ -24,10 +24,10 @@ jobs:
       # https://github.com/actions/starter-workflows/blob/main/ci/rust.yml
       
       - name: Build
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
       - run: cargo build --verbose
-       #- name: Run tests
-       #- run: cargo test --verbose
+      - name: Run tests
+      - run: cargo test --verbose
 
   generate-sbom:
     name: Generate SBOM
