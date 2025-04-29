@@ -1,6 +1,16 @@
 # TODO 1: ajouter les directives generales
 # https://github.com/actions/starter-workflows/blob/main/ci/rust.yml
 
+name: Rust
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
 jobs:
   build:
     name: Build
